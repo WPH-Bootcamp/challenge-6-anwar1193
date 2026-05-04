@@ -1,10 +1,17 @@
 // Tugas 3: Implementasikan fungsi-fungsi manajemen buku
 
+import { Book } from "../types";
+import { books } from "../data/books";
+
 // Fungsi addBook
 // Fungsi ini digunakan untuk menambahkan buku baru ke dalam koleksi
 // Parameter yang dibutuhkan: data buku sesuai tipe Book
 // Fungsi ini tidak mengembalikan nilai (void)
 // Petunjuk: pikirkan bagaimana cara menambahkan buku ke array yang sudah disediakan
+export function addBook(book: Book): void{
+    books.push(book);
+    console.log(`Buku "${book.title}" berhasil ditambahkan.`);
+}
 
 
 // Fungsi listBooks
