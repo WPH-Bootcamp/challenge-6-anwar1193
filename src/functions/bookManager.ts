@@ -19,6 +19,19 @@ export function addBook(book: Book): void{
 // Tidak memerlukan parameter
 // Fungsi ini tidak mengembalikan nilai (void)
 // Petunjuk: pikirkan cara menampilkan data buku dengan format yang mudah dibaca
+export function listBooks(): void{
+    if(books.length === 0){
+        console.log("Belum ada buku dalam koleksi.");
+        return;
+    }
+
+    console.log("Daftar Buku");
+    books.forEach((book, index) => {
+        console.log(
+            `${index + 1}. ${book.title} - ${book.author} (${book.publicationYear})`
+        );
+    });
+}
 
 
 // Fungsi searchBook
