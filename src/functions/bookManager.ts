@@ -48,12 +48,12 @@ export function searchBook(title?: string): void{
         return;
     }
 
-    const results = books.filter((book) => {
-        book.title.toLowerCase().includes(title.toLowerCase());
-    });
+    const results = books.filter((book) =>
+        book.title.toLowerCase().includes(title.toLowerCase())
+    );
 
     if(results.length === 0){
-        console.log(`Buku dengan judul "${title}"} tidak ditemukan`);
+        console.log(`Buku dengan judul "${title}" tidak ditemukan`);
         return;
     }
 

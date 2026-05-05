@@ -23,6 +23,17 @@ const bookManager_1 = require("./functions/bookManager");
     author: "Johanna Spyri",
     publicationYear: 1880
 });
+(0, bookManager_1.addBook)({
+    title: "Kambing Jantan",
+    author: "Raditya Dika",
+    publicationYear: 2014
+});
 // Tampilkan semua buku
 console.log("\n=== LIST SEMUA BUKU ===");
 (0, bookManager_1.listBooks)();
+// Cari buku dengan judul tertentu
+console.log("\n=== CARI BUKU: 'Heidi' ===");
+(0, bookManager_1.searchBook)("Heidi");
+// Cari tanpa parameter
+console.log("\n=== CARI TANPA PARAMETER ===");
+(0, bookManager_1.searchBook)();
